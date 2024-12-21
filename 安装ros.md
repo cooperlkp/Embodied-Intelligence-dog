@@ -1,3 +1,8 @@
+## 00 环境
+```bash
+Ubuntu20.04
+ros1
+```
 ## 01 更新清华源
 ```bash
 sudo apt update
