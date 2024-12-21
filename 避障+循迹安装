@@ -1,0 +1,77 @@
+## 00 连接Orin平台
+```bash
+ssh agx@192.168.1.105 #password123456
+```
+## 01 文件结构
+├── livox_ws
+│   ├── build
+│   │   ├── atomic_configure
+│   │   ├── bin
+│   │   ├── catkin
+│   │   ├── catkin_generated
+│   │   ├── CATKIN_IGNORE
+│   │   ├── catkin_make.cache
+│   │   ├── CMakeCache.txt
+│   │   ├── CMakeFiles
+│   │   ├── cmake_install.cmake
+│   │   ├── CTestConfiguration.ini
+│   │   ├── CTestCustom.cmake
+│   │   ├── CTestTestfile.cmake
+│   │   ├── gtest
+│   │   ├── livox_ros_driver2
+│   │   ├── Makefile
+│   │   └── test_results
+│   ├── devel
+│   │   ├── cmake.lock
+│   │   ├── env.sh
+│   │   ├── include
+│   │   ├── lib
+│   │   ├── local_setup.bash
+│   │   ├── local_setup.sh
+│   │   ├── local_setup.zsh
+│   │   ├── setup.bash
+│   │   ├── setup.sh
+│   │   ├── _setup_util.py
+│   │   ├── setup.zsh
+│   │   └── share
+│   ├── LivoxViewer2 for Ubuntu v2.3.0
+│   │   ├── Engine
+│   │   ├── LivoxViewer2
+│   │   ├── LivoxViewer2.sh
+│   │   └── Manifest_NonUFSFiles_Linux.txt
+│   ├── LivoxViewer2 for Ubuntu v2.3.0.zip
+│   ├── sdk
+│   │   └── Livox-SDK2
+│   ├── src
+│   │   ├── CMakeLists.txt -> /opt/ros/noetic/share/catkin/cmake/toplevel.cmake
+│   │   └── livox_ros_driver2
+│   ├── test4.bag
+│   ├── test5.bag
+│   └── test6.bag
+├── src
+│   ├── planner_ws
+│   │   ├── build
+│   │   ├── devel
+│   │   ├── src
+│   │   └── start_ego_planner.sh
+│   └── slam_ws
+│       ├── build
+│       ├── devel
+│       ├── dog_sl_ch
+│       ├── slam_mapping.sh
+│       ├── src
+│       └── test_lidar_map.bag
+└── zyy_nav.sh
+
+![image](https://github.com/user-attachments/assets/569b11f5-9d3f-49a1-a063-e29ea3497877)
+## 02 局域网配置
+- 用网线的一端连接B2机器人，另一端连接用户电脑，并开启电脑的 USB Ethernet 后进行配置
+- 机器狗机载电脑的 IP 地地址为 192.168.123.161，故需将电脑 USB Ethernet 地址设置为与机器狗同一网段，如192.168.123.222;
+- ifconfig命令查看123网段的网卡名字
+
+![image](https://github.com/user-attachments/assets/282b7b7e-389f-4535-99fc-6e8c88502401)
+## 03 运行轮足运控例程
+- 打开一个终端，并依次执行下列命令以运行例程。
+- 注：第二行命令中的"eth0"字符串需要用户自行替换为用户电脑中对应于123网段的网卡名字。
+```bash
+cd ~/unitree_sdk2/build/bin
