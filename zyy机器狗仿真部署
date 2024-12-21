@@ -7,11 +7,11 @@
 - 系统 UBUNTU 20.04
 - 安装 ROS neotic（参见另一个readme文件）
 - 安装 catkin_tools（参见另一个readme文件）
-
-## 03 安装皮诺曹
-- sudo apt install ros-neotic-pinocchio
-
-
 ```bash
-ssh agx@192.168.1.105 #password123456
+sudo apt-get install python3-catkin-tools
 ```
+## 03 安装皮诺曹
+```bash
+sudo apt install ros-neotic-pinocchio
+```
+
