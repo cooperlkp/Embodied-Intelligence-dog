@@ -59,8 +59,8 @@ sudo apt install python3-rosinstall python3-rosinstall-generator python3-wstool
 ```
 ## 06 测试小乌龟和roscore
 ```bash
-rosrun turtlesim turtlesim_node
 roscore
+rosrun turtlesim turtlesim_node
 ```
 ![图片](https://github.com/user-attachments/assets/6df5f896-9113-49d5-b6d6-2d1339b39634)
 
